@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AngularJs Demo</title>
+<script type="text/javascript" src="./js/test.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-init="firstName = 'tyrese'">
+        <p id="caaa">test content {{content}}</p>
+        <input type="text" ng-model="content">
+        <p>English Name : <span ng-bind="firstName"></span></p>
+    </div>
+</body>
+</html>

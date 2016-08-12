@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AngularJs Demo</title>
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="controller" >
+        <p ng-repeat="x in names">姓名：{{x}}</p>
+        <p>电话：{{test_tel}}</p>
+    </div>
+</body>
+<!-- 加载angular app需要放在后面，不然加载不了 -->
+<script type="text/javascript">
+    var app = angular.module("myApp", []);
+    app.controller('controller', function($scope, $rootScope){
+        $scope.names = ['tyrese', 'gabriella', 'kate', 'taylor'];
+        $rootScope.test_tel = "12121212";
+    });
+</script>
+</html>

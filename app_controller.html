@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AngularJs Demo</title>
+
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="controller" >
+        <p>姓名：<input type="text" name="" ng-model="name"></p>
+        <p>电话：<input type="text" name="" ng-model="telephone"></p>
+        <p>{{name + " " + telephone}}</p>
+        <runoob-directive></runoob-directive>
+        <div runoob-directive></div>
+    </div>
+
+    <!-- 貌似再加一个APP没有用。或许是没有找对方法 -->
+    <div ng-app="anotherApp" ng-controller="anotherCtrl">
+        <p>{{x + y}}</p>
+    </div>
+</body>
+<!-- 加载angular app需要放在后面，不然加载不了 -->
+<script type="text/javascript" src="./js/test.js"></script>
+</html>
