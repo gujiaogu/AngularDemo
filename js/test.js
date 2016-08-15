@@ -3,6 +3,9 @@ app.controller('controller', function($scope) {
     //这里scope的名字是固定的，不能改为其他
     $scope.name = "John";
     $scope.telephone = "189434";
+    $scope.fullName = function() {
+        return $scope.name + " " + $scope.telephone;
+    };
 });
 app.directive("runoobDirective", function() {
     return {
@@ -12,7 +15,7 @@ app.directive("runoobDirective", function() {
 });
 
 var anotherApp = angular.module('anotherApp', []);
-anotherApp.controller('anotherCtrl', function($scope){
+app.controller('anotherCtrl', function($scope){
     $scope.x = 5;
     $scope.y = 6;
 });

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AngularJs Demo</title>
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<!-- html文档只能有一个ng-app -->
+<body>
+    <div ng-app="myApp" ng-controller="controller" >
+        <select ng-model="selectedOption" ng-options="x.name for x in names"></select>
+        <p>您的选择是 {{selectedOption.country}}</p>
+    </div>
+</body>
+<!-- 加载angular app需要放在后面，不然加载不了 -->
+<script type="text/javascript" src="./js/selection.js"></script>
+</html>
